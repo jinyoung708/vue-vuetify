@@ -40,7 +40,8 @@
 </template>
 
 <script>
-import Flipbook from 'flipbook-vue/vue2'
+import Flipbook from 'flipbook-vue/vue2' // 현재 vue2 에 맞춰서 작업
+// import Flipbook from 'flipbook-vue' // vue3 버전
 export default {
     components: { Flipbook },
     data: () => ({
