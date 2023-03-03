@@ -14,13 +14,13 @@
       @zoom-end="onZoomEnd"
     >
       <div class="action-bar">
-        <v-btn class="mx-2 btn left" :disabled="!flipbook.canFlipLeft" fab small @click="flipbook.flipLeft"><v-icon>mdi-chevron-left</v-icon></v-btn>
-        <v-btn class="mx-2 btn plus" :disabled="!flipbook.canZoomIn" fab small @click="flipbook.zoomIn"><v-icon>mdi-plus</v-icon></v-btn>
+        <v-btn class="btn left" :disabled="!flipbook.canFlipLeft" icon large color="white" @click="flipbook.flipLeft"><v-icon>mdi-chevron-left-circle</v-icon></v-btn>
+        <v-btn class="btn plus" :disabled="!flipbook.canZoomIn" icon large color="white" @click="flipbook.zoomIn"><v-icon>mdi-plus-circle</v-icon></v-btn>
         <span class="page-num">
           Page {{ flipbook.page }} of {{ flipbook.numPages }}
         </span>
-        <v-btn class="mx-2 btn plus" :disabled="!flipbook.canZoomOut" fab small @click="flipbook.zoomOut"><v-icon>mdi-minus</v-icon></v-btn>
-        <v-btn class="mx-2 btn plus" :disabled="!flipbook.canFlipRight" fab small @click="flipbook.flipRight"><v-icon>mdi-chevron-right</v-icon></v-btn>
+        <v-btn class="btn plus" :disabled="!flipbook.canZoomOut" icon large color="white" @click="flipbook.zoomOut"><v-icon>mdi-minus-circle</v-icon></v-btn>
+        <v-btn class="btn plus" :disabled="!flipbook.canFlipRight" icon large color="white" @click="flipbook.flipRight"><v-icon>mdi-chevron-right-circle</v-icon></v-btn>
       </div>
     </Flipbook>
 </template>
