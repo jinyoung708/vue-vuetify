@@ -3,10 +3,12 @@
     <p class="red">red</p>
     <p class="blue">blue</p>
     <v-btn @click="overlay = true">flip book open</v-btn>
-    <div class="layer-popup" v-if="overlay">
-      <button type="button" class="close-btn" @click="overlay = false">X</button>
-      <FlipbookPopup />
-    </div>
+    <v-fade-transition>
+      <div class="layer-popup" v-if="overlay">
+        <v-btn class="mx-2 close-btn" fab small @click="overlay = false"><v-icon dark>mdi-close</v-icon></v-btn>
+        <FlipbookPopup />
+      </div>
+    </v-fade-transition>
   </v-container>
 </template>
 
@@ -41,12 +43,6 @@ export default {
     position: absolute;
     right: 20px;
     top: 10px;
-    background-color: #fff;
-    width: 40px;
-    height: 40px;
-    font-size: 1.3em;
-    font-weight: 700;
-    border-radius: 50%;
   }
 }
 </style>

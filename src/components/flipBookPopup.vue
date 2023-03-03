@@ -14,27 +14,13 @@
       @zoom-end="onZoomEnd"
     >
       <div class="action-bar">
-        <button
-          class="btn left"
-          :class="{ disabled: !flipbook.canFlipLeft }"
-          @click="flipbook.flipLeft"
-        >&lt;</button>
-        <button
-          class="btn plus"
-          :class="{ disabled: !flipbook.canZoomIn }"
-          @click="flipbook.zoomIn"
-        >+</button>
+        <v-btn class="mx-2 btn left" :disabled="!flipbook.canFlipLeft" fab small @click="flipbook.flipLeft"><v-icon>mdi-chevron-left</v-icon></v-btn>
+        <v-btn class="mx-2 btn plus" :disabled="!flipbook.canZoomIn" fab small @click="flipbook.zoomIn"><v-icon>mdi-plus</v-icon></v-btn>
         <span class="page-num">
           Page {{ flipbook.page }} of {{ flipbook.numPages }}
         </span>
-        <button
-          class="btn minus"
-          :class="{ disabled: !flipbook.canZoomOut }"
-          @click="flipbook.zoomOut">-</button>
-        <button
-          class="btn right"
-          :class="{ disabled: !flipbook.canFlipRight }"
-          @click="flipbook.flipRight">&gt;</button>
+        <v-btn class="mx-2 btn plus" :disabled="!flipbook.canZoomOut" fab small @click="flipbook.zoomOut"><v-icon>mdi-minus</v-icon></v-btn>
+        <v-btn class="mx-2 btn plus" :disabled="!flipbook.canFlipRight" fab small @click="flipbook.flipRight"><v-icon>mdi-chevron-right</v-icon></v-btn>
       </div>
     </Flipbook>
 </template>
@@ -128,25 +114,6 @@ export default {
     color: #fff;
     span {
         padding: 0 20px;
-    }
-    button {
-        width: 30px;
-        height: 30px;
-        line-height: 30px;
-        background-color: #bbb;
-        border-radius: 50%;
-        margin: 0 5px;
-        color: #323232;
-        font-size: 1.3em;
-        font-weight: 700;
-        &.disabled  {
-            background-color: #666;
-            cursor: auto;
-        }
-        &:not(.disabled):hover {
-            background-color: #ccc;
-            box-shadow: 1px 1px 5px #000;
-        }
     }
 }
 </style>
