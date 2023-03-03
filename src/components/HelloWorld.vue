@@ -39,11 +39,11 @@ export default {
   .close-btn {
     position: absolute;
     right: 20px;
-    top: 20px;
+    top: 10px;
     background-color: #fff;
-    width: 50px;
-    height: 50px;
-    font-size: 1.5em;
+    width: 40px;
+    height: 40px;
+    font-size: 1.3em;
     font-weight: 700;
     border-radius: 50%;
   }

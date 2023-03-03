@@ -111,19 +111,42 @@ export default {
 .flipbook {
     display: inline-block;
     width: 90vw;
-    height: 90vh;
     vertical-align: middle;
+    &::v-deep {
+        .viewport {
+            width: 90vw !important;
+            height: calc(100vh - 50px - 40px) !important;
+        }
+        .bounding-box {
+            box-shadow: 0 0 20px #000;
+        }
+    }
 }
 .action-bar {
-    margin-bottom: 10px;
+    margin-bottom: 30px;
     text-align: center;
     color: #fff;
+    span {
+        padding: 0 20px;
+    }
     button {
-        width: 20px;
-        height: 20px;
-        background-color: #000;
-        border-radius: 5px;
+        width: 30px;
+        height: 30px;
+        line-height: 30px;
+        background-color: #bbb;
+        border-radius: 50%;
         margin: 0 5px;
+        color: #323232;
+        font-size: 1.3em;
+        font-weight: 700;
+        &.disabled  {
+            background-color: #666;
+            cursor: auto;
+        }
+        &:not(.disabled):hover {
+            background-color: #ccc;
+            box-shadow: 1px 1px 5px #000;
+        }
     }
 }
 </style>
