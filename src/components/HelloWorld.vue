@@ -2,6 +2,7 @@
   <v-container>
     <p class="red">red</p>
     <p class="blue">blue</p>
+    <v-btn type="button" @click="overlay = true">flip book open</v-btn>
     <div class="layer-popup" v-if="overlay">
       <button type="button" class="close-btn" @click="overlay = false">X</button>
       <FlipbookPopup />
@@ -15,7 +16,7 @@ export default {
   name: 'HelloWorld',
   components: { FlipbookPopup },
   data: () => ({
-    overlay: true,
+    overlay: false,
   }),
 }
 </script>
